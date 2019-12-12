@@ -1,4 +1,4 @@
-# jenkins2-with-docker
+# jenkins2-with-docker &  docker in docker  & docker-compose
 Learning :: How to install/config the Continuous Integration Server with Jenkins on Docker 
 
 * Jenkins master 
