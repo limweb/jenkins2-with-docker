@@ -18,7 +18,8 @@ RUN chown -R jenkins:jenkins /var/log/jenkins
 RUN chown -R jenkins:jenkins /var/cache/jenkins
 RUN usermod -aG docker jenkins && \
     chown -R jenkins:jenkins $JENKINS_HOME
-    
+RUN rm -rf /var/lib/apt/lists/*
+
 USER jenkins
 ENV JAVA_OPTS="-Xmx8192m"
 
