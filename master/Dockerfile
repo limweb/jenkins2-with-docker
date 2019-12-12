@@ -12,13 +12,13 @@ RUN apt-get update -qq && \
 RUN sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
     sudo chmod +x /usr/local/bin/docker-compose
     
+RUN mkdir /var/log/jenkins
 RUN mkdir /var/cache/jenkins
 RUN chown -R jenkins:jenkins /var/log/jenkins
 RUN chown -R jenkins:jenkins /var/cache/jenkins
 RUN usermod -aG docker jenkins && \
-    chown -R jenkins:jenkins $JENKINS_HOME/
-RUN mkdir /var/log/jenkins
-
+    chown -R jenkins:jenkins $JENKINS_HOME
+    
 USER jenkins
 ENV JAVA_OPTS="-Xmx8192m"
 
