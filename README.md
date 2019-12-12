@@ -17,3 +17,5 @@ docker-compose up -d
 # use docker command line
 mkdir /var/log/jenkins
 docker run -p 8080:8080 -p 50000:50000 --name=jenkins-master -v /var/log/jenkins:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock  -d <limweb/jenkins-dind or you tag image id>
+
+[![Try in PWD](https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/limweb/jenkins2-with-docker/master/docker-compose.yml).
