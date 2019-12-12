@@ -3,7 +3,8 @@ Learning :: How to install/config the Continuous Integration Server with Jenkins
 
 * Jenkins master 
 * Jenkins data to keep all configuration such as plugins and jobs of Jenkins
-#build image 
+
+# build image
 docker build -t jenkins-data -f data/Dockerfile .
 docker build -t <you tag jenkins2> -f master/Dockerfile .
 
